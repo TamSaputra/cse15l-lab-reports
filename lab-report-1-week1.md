@@ -10,32 +10,29 @@ For the examples, I'll be using the file structure that was cloned from [https:/
 
 ## Commands
 1. ```cd``` command
-  ![cdNoArgs](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/b7531845-a632-4a3c-be9c-da86be0b667e)
+![cdNoArgs](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/b7531845-a632-4a3c-be9c-da86be0b667e)
     * Working directory: ```/home/lecture1```
     * ```cd``` stands for "change directory". Since there is no argument, the working directory doesn't move and goes back to the parent directory.
-    * Using the command with no argument doesn't throw out an error.
-  
-  ![cdDirectory](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/8da23ee1-0972-4ea0-9935-8f4bca6c6d81)  
+    * Using the command with no argument doesn't throw out an error. 
+![cdDirectory](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/8da23ee1-0972-4ea0-9935-8f4bca6c6d81)  
      * Working directory: ```/home```
      * When giving a directory as an argument, the command will change the working directory into the directory specified in the argument.
-     * Using the command with a directory as an argument doesn't throw out an error.
-  
-  ![cdFile](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/668e0343-c386-433e-bda9-0b626fd3ee60)  
+     * Using the command with a directory as an argument doesn't throw out an error.  
+![cdFile](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/668e0343-c386-433e-bda9-0b626fd3ee60)  
      * Working directory: ```/home/lecture1```
      * When giving a file as an argument, it will throw out an error indicating that the file isn't a directory.
      * As the name of the command ```cd``` implies, it changes the directory. So when the argument is a file, it throws out an error because we can't have a file as a working directory.
 
 2. ```ls``` command
-  ![lsNoArgs](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/e7df6be9-fd4e-46fb-b57c-53b7d734bffa)
+![lsNoArgs](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/e7df6be9-fd4e-46fb-b57c-53b7d734bffa)
      * Working directory: ```/home/lecture1```
      * Even with no argument, the command lists the content of the current working directory which in this case is ```lecture1```.
      * Using the command with no argument doesn't throw out an error.
-  
-  ![lsDirectory](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/396dba20-6b68-476c-9ba9-352d8b3cc452)
+![lsDirectory](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/396dba20-6b68-476c-9ba9-352d8b3cc452)
      * Working directory: ```/home/lecture1```
      * The ```ls``` command takes in the argument and prints the content of the directory specified in the argument, in this case, ```messages```
      * Using the command with a directory as an argument doesn't throw out an error. 
-  ![lsFile](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/8449e7ba-f921-4360-9d46-5592754a68f8)
+![lsFile](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/8449e7ba-f921-4360-9d46-5592754a68f8)
      * Working directory: ```/home/lecture1```
      * The ```ls``` command accepts file as an argument but since it's not a directory, it only "list" the name of the file in the argument instead of the content of the file.
      * Using the command with a file as an argument doesn't throw out an error (although it doesn't exactly "list" anything). 
