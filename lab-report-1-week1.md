@@ -53,3 +53,7 @@ For the examples, I'll be using the file structure that was cloned from [https:/
      * Working directory: ```/home```
      * The output is the content of the file specified in the argument which in this case is ```README```. So ```cat``` displays the content of a file and that's what we see in the output of the command.
      * It doesn't throw out an error.
+  
+
+  PS: Sorry for the terrible formatting. I can't get the nested list to work properly for some reason.
+     
