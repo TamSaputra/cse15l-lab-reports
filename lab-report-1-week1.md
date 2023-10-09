@@ -4,4 +4,9 @@ For this week's lab report, I'll be going over 3 commands we learned in week 1 l
 And for each of the commands, I'll be showing an example of:  
 * Using the command with *no* argument
 * Using the command with a path to a *directory* as an argument
-* using the command with a path to a *file* as an argument
+* Using the command with a path to a *file* as an argument
+
+For the examples, I'll be using the file structure that was cloned from [https://github.com/ucsd-cse15l-f23/lecture1](https://github.com/ucsd-cse15l-f23/lecture1) into the EdStem workspace where all of the example screenshots will be taken from.  
+
+## Commands
+```cd```
