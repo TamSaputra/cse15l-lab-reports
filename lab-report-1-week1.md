@@ -9,4 +9,6 @@ And for each of the commands, I'll be showing an example of:
 For the examples, I'll be using the file structure that was cloned from [https://github.com/ucsd-cse15l-f23/lecture1](https://github.com/ucsd-cse15l-f23/lecture1) into the EdStem workspace where all of the example screenshots will be taken from.  
 
 ## Commands
-```cd```
+1. ```cd```
+![cdNoArgs](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/bf660f92-15c6-4d09-955f-ca9a08f9b05d)
+
