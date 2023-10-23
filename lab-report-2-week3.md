@@ -59,4 +59,16 @@ class StringServer {
     }
 }
 ```
+To give credit where it is due, I used the NumberServer.java file provided from the [wavelet github page](https://github.com/ucsd-cse15l-f23/wavelet) as a base to create the StringServer.java file. I only edited a few lines of code to make it function as a StringServer specified for the lab report (but much if not most of it is from NumberServer.java).  
+
+To show that the ```/add-message``` request works, I will provide two screenshots using the request.  
+And for each screenshots I will also describe:
+* The methods that are called in the code
+* The relevant argument to those methods and the values of relevant fields of the class
+* How the values change from this specific request
+
+As a small disclaimer, I'll only be going over the methods that are shown from the code of StringServer.java. I'm aware that the code also calls method from other .java files (such as Server.start(port, new Handler()) which isn't shown).
+
+![add-message1](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/baf1cfee-7e63-47b4-a55a-778c4ba8cd8c)
+
 
