@@ -81,8 +81,14 @@ As a small disclaimer, I'll only be going over the methods that are shown from t
 
 
 ## Part 2
-(It is unlikely I'll finish this on time)
+For this part I'll be showing a screenshot of me using the ```ls``` command to:
+* Show the path to the private key
+* Show the path to the public key
+* Show the terminal interaction where I can login without a password
 
+![privateKey](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/17b8d879-75b3-4d86-a5ec-fa727a8c682c)
+![publicKey](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/e4155915-a5f9-412a-8c61-e51749ad05b7)
+![PasswordlessLogin](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/711f0064-33e5-4eb3-95b2-082e0cd95573)
 
 ## Part 3
 I definitely didn't know how to start a simple web server using Java before week 2 so all of this is very new to me. I also learned how to create my own server in Java and actually have it run and function properly. For week 3, I'm already somewhat familiar with the process of using ```ssh``` since I'm taking CSE 30 concurrently with this class so I was already exposed to the command before (albeit with GREAT difficulty).
