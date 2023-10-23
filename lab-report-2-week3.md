@@ -67,8 +67,22 @@ And for each screenshots I will also describe:
 * The relevant argument to those methods and the values of relevant fields of the class
 * How the values change from this specific request
 
-As a small disclaimer, I'll only be going over the methods that are shown from the code of StringServer.java. I'm aware that the code also calls method from other .java files (such as Server.start(port, new Handler()) which isn't shown).
+As a small disclaimer, I'll only be going over the methods that are shown from the code of StringServer.java. I'm aware that the code also calls method from other .java files (such as Server.start(port, new Handler()) which isn't shown, or in-built java methods).
 
 ![add-message1](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/baf1cfee-7e63-47b4-a55a-778c4ba8cd8c)
+* Following the main method and going into the new Handler object, the handleRequest method is called. Then getPath() method is called as part of an if-statement. The getQuery() method is also called when the ```/add-message``` request is called.
+* For the main method, the method takes in an argument for a port number that's used to start the server. It eventually calls on the handleRequest method with the ```url``` argument which is (in my case, I used port 4000) ```http://http://localhost:4000```. From there the other method takes in arguments as part of the String object methods, array methods, or array list methods.
+* Since the request shown in the screenshot is the ```/add-message``` request, the only relevant values that would change is the actual string that is added to the list and a ```num``` variable that is used to keep track of the amount of strings being added.
+  
+![add-message2](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/90d3ccb6-02c5-4ca5-9688-30034261908b)
+* Since this is the same request, the process is very similar (if not the same) as the previous screenshot. The only difference would be that it no longer has to call main and all the other methods use to start up the server (since the server is already running). The only relevant method called when this request is called is the getPath() methods for both if-statements.
+* The relevant argument are the same as the previous screenshot as well except for a different string as the query. Only the content of ```stringContent``` and ```num``` changes (then again they're variables, not arguments)
+* Again, same as before the only values that changes from this specific request is the ```num``` variable since it increments, and the ```stringContent``` list since it will have a different string to add to the list.
 
 
+## Part 2
+(It is unlikely I'll finish this on time)
+
+
+## Part 3
+I definitely didn't know how to start a simple web server using Java before week 2 so all of this is very new to me. I also learned how to create my own server in Java and actually have it run and function properly. For week 3, I'm already somewhat familiar with the process of using ```ssh``` since I'm taking CSE 30 concurrently with this class so I was already exposed to the command before (albeit with GREAT difficulty).
