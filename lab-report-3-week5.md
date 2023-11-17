@@ -132,7 +132,7 @@ The file structure I'll be using for this part is the same file structure as the
    technical/government/Post_Rate_Comm/ReportToCongress2002WEB.txt:64
    technical/government/Post_Rate_Comm/WolakSpeech_usps.txt:0 
    ```
-   The command-line counts the number of times the given word is mentioned in a file. It's useful to see how often a word may be used in a file.
+   The command-line counts the number of times the given word is mentioned in a file. It's useful to see how often a word may be used in a file. When combined with ```-v```, it could also be used to find the number of lines that does *not* have the given word.
   
 3. ```-v``` Invert match
    ```
@@ -316,3 +316,69 @@ The file structure I'll be using for this part is the same file structure as the
 
    ```
    The invert match command-line displays the line within a file that does *not* have the word in the argument. In both examples, the output that was displayed are all the lines that does not have the word/substring "we" (for the first example) and the word/substring "the" (for the second example). The command could be useful to reduce clutter when trying to read a file with a lot of text or white space.
+  
+4. ```-w``` Whole words only
+   ```
+   $ grep -w "alcohol" technical/government/Alcohol_Problems/DraftRecom-PDF.txt
+   address the full spectrum of alcohol problems among ED
+   "alcohol problems" does not always include risky drinking and
+   detail on the spectrum of alcohol problems. He suggested the main
+   include the whole continuum of alcohol problems, not just a portion
+   of the continuum such as alcohol-dependent drinkers.
+   of alcohol problems" include primary prevention. She recommended
+   Carl Soderstrom wondered whether "alcohol problems" referred to
+   problems in addition to medical problems. The phrase "alcohol
+   "in the emergency setting" because alcohol problems are not limited
+   to patients. Perhaps the recommendations should address alcohol
+   Stephen Hargarten thought that the term "alcohol-related
+   problems" would appeal to clinicians more than "alcohol problems"
+   Richard Ries said he did not believe that screening for alcohol
+   alcohol use disorders or problems, not for medical care
+   people with severe alcohol problems and alcohol dependence than did
+   Richard Longabaugh said that the term "alcohol problems" implies
+   "alcohol-related problems" because consumption is not the problem.
+   Li added his support to "alcohol-related problems," but
+   in mind, he suggested listing the full spectrum of alcohol
+   problems, from risky drinking to alcohol abuse to alcohol
+   would be to say, "the full spectrum of alcohol misuse."
+   "Problematic alcohol-use screening instruments under consideration
+   that provide alcohol-use interventions for patients to decrease
+   that screening activities for alcohol problems should be integrated
+   Smith returned to the idea of linking alcohol interventions with
+   Pollock asked Gordon whether research on alcohol interventions
+   issues on screening and interventions for alcohol problems among ED
+   addresses. He noted that alcohol screening in the ED is currently
+   interventions for alcohol problems.
+   needed to institutionalize screening and intervention for alcohol
+   organizational issues-from the structure of alcohol and screening
+   care outcomes and recidivism, rather than alcohol use outcomes.
+   sooner patients with alcohol problems can receive help. She noted
+   is appropriate for alcohol problems because they are not just
+   department in the overall picture of treating alcohol problems.
+   Bernstein noted that alcohol-dependent patients clearly need
+   with alcohol problems.
+   intervention for alcohol problems among ED patients.
+   screening and interventions for alcohol problems among ED patients
+   from alcohol problems.
+   to make research on alcohol problems in the ED a high priority.
+   prevalence of alcohol problems among ED patients makes it worthy of
+   believed that data on the prevalence and severity of alcohol
+   patients affected by alcohol problems and the significant health
+   many patients with alcohol problems as the psychiatry or family
+   thought combining alcohol and drug research in EDs could lead to
+   importance of screening for alcohol and other drugs together. To
+   dealing with alcohol problems is an integral part of their job.
+   Research on alcohol problems is as important as research on sepsis
+   alcohol-related research in the surgery section. It was all in the
+   alcohol section, which surgeons do not explore. If we want surgeons
+   objective to reduce alcohol-related injury and ED visits by 15%
+   pharmocotherapy for patients with alcohol-related problems in the
+   
+   ```
+   ```
+   $ grep -w "recommend" technical/government/Alcohol_Problems/DraftRecom-PDF.txt
+   Instead, we could recommend that, compared with other settings, the
+   careful consideration. We can also recommend that research efforts
+   
+   ```
+   The command-line option only outputs the lines that have the exact word specified in the argument, ignoring possible substrings. For example, the second example only displays two lines that have the exact word "recommend" instead of also displaying lines with the word "recommendations" in the file. The command itself is very useful when trying to find a specific word within a file rather than seeing all the words that have that substring.
