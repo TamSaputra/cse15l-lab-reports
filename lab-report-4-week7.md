@@ -42,7 +42,7 @@ Similar to the previous step, I first typed out ```vim L``` and pressed ```<tab>
 ### Step 8: Run the tests, demonstrating that they now succeed
 ![Step8](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/f39adf68-2020-41a8-8394-92c530a499d9)  
 Keys pressed: `<up arrow><up arrow><enter>`  
-Commands ran: `bash test.sh `
+Commands ran: `bash test.sh `  
 The up arrow scrolls through the history of commands that was used before. Since I used `bash test.sh` in step 6, I simply pressed the up arrow twice and press `<enter>` to run the `test.sh` script.
 
 ### Step 9: Commit and push the resulting change to your Github account (you can pick any commit message!)
