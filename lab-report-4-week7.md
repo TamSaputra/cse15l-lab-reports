@@ -17,7 +17,7 @@ For each of the steps (4-9), I'll be showing a screenshot, writing down the keys
 ### Step 4: Log into ieng6
 ![Step4](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/74611eb0-f009-4f20-a772-f357cac9d815)
 Keys pressed: ```ssh<space>cs15lfa23kg@eng6.ucsd.edu<enter>```  
-Commands ran: ```sssh cs15lfa23kg@ieng6.ucsd.edu```  
+Commands ran: ```ssh cs15lfa23kg@ieng6.ucsd.edu```  
 The keys pressed are just the regular command to log into ieng6. Usually I would use the up arrow but since this is my first time logging in to ieng6 on a new terminal, there is no history for me to "scroll" through.
   
 ### Step 5: Clone your fork of the repository from your Github account (using the SSH URL)
