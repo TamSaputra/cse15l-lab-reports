@@ -8,3 +8,6 @@ Links for Lab Reports:
 2. [Lab Report 2](https://tamsaputra.github.io/cse15l-lab-reports/lab-report-2-week3.html)
 3. [Lab Report 3](https://tamsaputra.github.io/cse15l-lab-reports/lab-report-3-week5.html)
 4. [Lab Report 4](https://tamsaputra.github.io/cse15l-lab-reports/lab-report-4-week7.html)
+5. [Lab Report 5 (WIP!)](https://tamsaputra.github.io/cse15l-lab-reports/lab-report-5-week9.html)
+  
+Lab Reports GitHub page [here](https://github.com/TamSaputra/cse15l-lab-reports)
