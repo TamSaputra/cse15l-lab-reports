@@ -112,3 +112,78 @@ It seems that you're right in that the Java file couldn't find the JUnit package
 #### Student:
 I've added `echo $(pwd)` right before the `javac` command to see where the working directory is. I also ran the `grade.sh` script with the `-x` command you suggested and the error is indeed caused by the `javac` command:
 ![Symptoms_Suggestion](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/d7ffc948-b894-4625-b255-3f3ef167f089)
+
+The current directory when the script was running the `javac` command was `/c/Users/stama/Documents/GitHub/list-examples-grader/grading-area`. The `lib` directory is in the home directory which explains why the `TestListExamples.java` couldn't find the JUnit package. 
+
+The bug seems to be that `grading-area` is missing that required `lib` directory. What I did to fix the bug was to create the `lib` directory *inside* `grading-area` and copy the `.jar` files from the original `lib` directory to the new `lib` directory *inside* `grading-area`. I added
+```
+mkdir lib
+cp ../lib/*.jar ./lib
+```
+while inside `grading-area` to create the `lib` directory and copy the `.jar` files over. 
+
+Now the `grade.sh` script looks like this:
+```
+CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
+
+rm -rf student-submission
+rm -rf grading-area
+
+mkdir grading-area
+
+git clone $1 student-submission
+echo 'Finished cloning'
+
+# Draw a picture/take notes on the directory structure that's set up after
+# getting to this point
+# 
+# list-examples-grader
+#   |- grading-area
+#   |- lib
+#       |- hamcrest-core-1.3.jar
+#       |- junit-4.13.2.jar
+#   |- student-submission
+#       |- <Cloned student submission goes here>
+#   |- grade.sh
+#   |- GradeServer.java
+#   |- Server.java
+#   |- TestListExamples.java
+
+
+# Then, add here code to compile and run, and do any post-processing of the
+# tests
+
+submissionPath=`find */ListExamples.java`
+echo "The path is $submissionPath"
+
+if [[ -f $submissionPath ]]
+then
+    echo 'ListExamples.java found'
+else
+    echo -e 'ListExamples.java not found\n
+            Please make sure the file is named "ListExamples.java" and not inside another directory'
+    exit
+fi
+
+cp $submissionPath TestListExamples.java grading-area
+
+# Creates the lib directory inside grading-area (so the test could actually run)
+cd grading-area
+mkdir lib
+cp ../lib/*.jar ./lib
+
+echo "Working directory: $(pwd)"
+
+javac -cp "$CPATH" *.java
+
+if [[ $? -ne 0 ]]
+then
+    echo -e "--------------------\nCompilation failed\n--------------------"
+    exit
+else
+    echo -e "------------------------\nCompilation successful\n------------------------"
+fi
+
+java -cp "$CPATH" org.junit.runner.JUnitCore TestListExamples
+```
+
