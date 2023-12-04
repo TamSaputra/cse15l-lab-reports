@@ -188,8 +188,10 @@ java -cp "$CPATH" org.junit.runner.JUnitCore TestListExamples
 ```
 And this is the result of running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected` in the terminal after fixing the bug:
 ![Symptoms_Fixed](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/daab7b40-fb53-410b-867a-79196b055ce6)
+
+I didn't edit the content of `TestListExamples.java` so it should still be the same from before I fixed the bug.
   
-And this is the file structure afterwards:  
+This is the file structure afterwards:  
 ![FileDirectoryStructure_Fixed](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/c7453c40-ecdb-4416-8c92-a72095a910f9)
 
 Thank you for the suggestions! It works as expected now.
