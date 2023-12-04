@@ -13,7 +13,7 @@ I'll also be using the materials from [Lab 6](https://ucsd-cse15l-f23.github.io/
 ---
 #### Student:
 Hello, I seem to be having trouble in getting `TestListExamples.java` to run. Here's the symptom that I'm getting after running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected` in the command line:
-![Symptoms](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/31108419-19f6-4d67-be31-2b7859db2d6e)
+![Symptoms_Buggy](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/31108419-19f6-4d67-be31-2b7859db2d6e)
 
 From the symptoms, it looks like the java file couldn't find the JUnit package. However, I did make sure that the `lib` directory exists inside `list-examples-grader` directory that I initially cloned from the lab. This is my file and directory structure after running the same `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected` command from earlier: 
 ![FileDirectoryStructure_Buggy](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/efd0a369-d087-4e00-a29a-b7f4f5de308a)
@@ -186,4 +186,16 @@ fi
 
 java -cp "$CPATH" org.junit.runner.JUnitCore TestListExamples
 ```
+And this is the result of running `bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected` in the terminal after fixing the bug:
+![Symptoms_Fixed](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/daab7b40-fb53-410b-867a-79196b055ce6)
+  
+And this is the file structure afterwards:  
+![FileDirectoryStructure_Fixed](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/c7453c40-ecdb-4416-8c92-a72095a910f9)
 
+Thank you for the suggestions! It works as expected now.
+
+---
+(P.S. I've never been a TA or a tutor before so my scenario might have been a little out of touch. Sorry!)
+
+## Part 2
+Something I learned from the second half of the quarter is writing my own grading script and learning more detail about Vim. I've heard of scripts before and what it can do but I find it really cool to be able to write one on my own now. Since I'm in CSE 30 along with CSE 15L, I was already aware of Vim long before we actually used it in lab. But since CSE 30 assumes I know Vim from this class, navigating Vim was a nightmare so it's nice to actually be able to learn how to use Vim quickly during one of the labs. 
