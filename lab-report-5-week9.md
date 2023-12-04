@@ -4,11 +4,11 @@ For part 1, I'll be covering a debugging scenario in the format of an EdStem pos
 
 Throughout the scenario, I'll be providing the following information:
 * The file & directory structure needed
-* The contents of each file before fixing the bug
-* The full command line (or lines) you ran to trigger the bug
+* The contents of each file *before* fixing the bug
+* The full command line (or lines) that was ran to trigger the bug
 * A description of what to edit to fix the bug
 
-I'll also be using the materials from [Lab 6](https://ucsd-cse15l-f23.github.io/week/week6/). The Java file I'll be using is from [Lab 6 Student Submission](https://ucsd-cse15l-f23.github.io/week/week6/#student-submissions), specifically the [corrected version](https://github.com/ucsd-cse15l-f22/list-methods-corrected) (so that the bug shown is actually from the student's error rather that the submissions). As for the bash script, I'll be using my version of `grade.sh` that I built for the lab task from the provided [repository](https://github.com/ucsd-cse15l-s23/list-examples-grader) in Lab 6.
+I'll also be using the materials from [Lab 6](https://ucsd-cse15l-f23.github.io/week/week6/). The Java file I'll be using is from [Lab 6 Student Submission](https://ucsd-cse15l-f23.github.io/week/week6/#student-submissions), specifically the [corrected version](https://github.com/ucsd-cse15l-f22/list-methods-corrected) (so that the bug shown is actually from the student's error rather that the submissions). As for the bash script, I'll be using my (incomplete) version of `grade.sh` that I built for the lab task from the provided [repository](https://github.com/ucsd-cse15l-s23/list-examples-grader) in Lab 6.
 
 ---
 #### Student:
@@ -77,7 +77,7 @@ fi
 
 java -cp "$CPATH" org.junit.runner.JUnitCore TestListExamples
 ```
-And this is the `TestListExamples.java` that I use in my bash script:
+This is the `TestListExamples.java` that I use in my bash script:
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -99,6 +99,59 @@ public class TestListExamples {
     List<String> expected = Arrays.asList("a", "a", "b", "c", "d");
     assertEquals(expected, merged);
   }
+}
+
+```
+And this is the `ListExamples.java` that my script is trying to grade:
+```
+import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(s);
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index2 += 1;
+    }
+    return result;
+  }
+
+
 }
 
 ```
