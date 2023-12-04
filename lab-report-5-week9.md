@@ -108,3 +108,7 @@ Any help would be appreciated. Thanks!
 #### TA:
 It seems that you're right in that the Java file couldn't find the JUnit package. It may be worth investigating *why* that may be the case. One thing to look for is the current working directory when trying to run the `javac` command inside the bash script. Maybe you can try adding an `echo` command to see where your working directory is before bash runs the `javac` command. You can also try using the `-x` option when running your bash script to see which specific command caused the error to print out.
 
+---
+#### Student:
+I've added `echo $(pwd)` right before the `javac` command to see where the working directory is. I also ran the `grade.sh` script with the `-x` command you suggested and the error is indeed caused by the `javac` command:
+![Symptoms_Suggestion](https://github.com/TamSaputra/cse15l-lab-reports/assets/112127930/d7ffc948-b894-4625-b255-3f3ef167f089)
